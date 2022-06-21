@@ -1,3 +1,5 @@
-# 100_days_of_RTL
+# 100 Days RTL Challenge
 
-## HI My name is Kevin
+This repository documents my journey of 100 days for learning System Verilog and UVM.
+
+
