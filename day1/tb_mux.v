@@ -1,42 +1,23 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/27/2022 02:49:48 PM
-// Design Name: 
-// Module Name: tb_test
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+`timescale 1ns/100ps
 
-
-module tb_test();
-
-reg [3:0]a,b;
-reg cin;
-wire [3:0]sum;
-wire cout;
-
-full_adder fa(sum,cout,a,b,cin);
-
-initial
-begin
-$display();
-end
-
-initial
-begin
-$monitor();
-end
-
+module tb_mux_2x1();
+ logic a,b,sel,out;
+  
+  mux_2x1 dut(out,a,b,sel);
+  
+  initial
+    begin
+      for (int i=0;i<10;i++)
+        begin
+          a = $random;
+          b = $random;
+          sel = $random;
+          #10;
+        end
+    end
+  
+  initial
+    begin
+      $monitor("sel=%b, a=%b, b=%b, out=%b",sel,a,b,out);
+    end
 endmodule
