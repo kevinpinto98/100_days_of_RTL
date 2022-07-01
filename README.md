@@ -5,10 +5,10 @@ This repository documents my journey of 100 days for learning System Verilog and
 From 01/07/2022 to 08/10/2022 I shall implement one RTL design and it's corresponding testbench daily using System Verilog and UVM (wherever possible) respectively.
 
 Mentioned below are the RTL designs that were implemented during the course of this challenge:
-Day 1 - Multiplexer
-Day 2 - D Flip-flop
-Day 3 - Edge Detector
-Day 4 - 4-bit Counter
-Day 5 - Finite State Machine
+* Day 1 - Multiplexer
+* Day 2 - D Flip-flop
+* Day 3 - Edge Detector
+* Day 4 - 4-bit Counter
+* Day 5 - Finite State Machine
 
 
