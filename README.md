@@ -12,5 +12,8 @@ From 01/07/2022 to 08/10/2022 I shall implement one RTL design and it's correspo
 * Day 5: Finite State Machine
 * Day 6: Clock Divide-by-3
 * Day 7: Shift Register
+* Day 8: Binary-to-Gray Converter
+* Day 9: Gray-to-Binary Converter
+* Day 10: A simple ALU
 
 
