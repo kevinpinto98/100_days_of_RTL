@@ -15,6 +15,15 @@ From 01/07/2022 to 08/10/2022 I shall implement one RTL design and it's correspo
 * Day 8: Binary-to-Gray Converter
 * Day 9: Gray-to-Binary Converter
 * Day 10: 4-bit Adder-Subtractor Circuit
-* Day 11: A simple ALU
+* Day 11: A Simple ALU
+* Day 12: Sequence Detection
+* Day 13: Priority Arbiter
+* Day 14: Round-robin Arbiter
+* Day 15: APB Master
+* Day 16: Memory Interface
+* Day 17: APB Slave
+* Day 18: Parameterized FIFO
+* Day 19: Register File
+* Day 20: 4-bit Serial Adder
 
 
