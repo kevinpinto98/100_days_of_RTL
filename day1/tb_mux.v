@@ -1,19 +1,21 @@
 `timescale 1ns/100ps
 
 module tb_mux_2x1();
- logic a,b,sel,out;
+ reg a,b,sel;
+ wire out;
   
   mux_2x1 dut(out,a,b,sel);
   
   initial
     begin
-      for (int i=0;i<10;i++)
-        begin
-          a = $random;
-          b = $random;
-          sel = $random;
-          #10;
-        end
+      sel = 1'b0; a = 1'b0; b = 1'b0;
+      #10 sel = 1'b0; a = 1'b0; b = 1'b1;
+      #10 sel = 1'b0; a = 1'b1; b = 1'b0;
+      #10 sel = 1'b0; a = 1'b1; b = 1'b1;
+      #10 sel = 1'b1; a = 1'b0; b = 1'b0;
+      #10 sel = 1'b1; a = 1'b0; b = 1'b1;
+      #10 sel = 1'b1; a = 1'b1; b = 1'b0;
+      #10 sel = 1'b1; a = 1'b1; b = 1'b1;
     end
   
   initial
