@@ -1,3 +1,5 @@
+`timescale  1ns/100ps
+
 module tb_binary_to_gray();
 parameter SIZE=4;
 reg [SIZE-1:0] binary;
