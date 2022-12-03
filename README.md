@@ -21,7 +21,7 @@ From 26/08/2022 onwards I shall implement one RTL design and it's corresponding 
 * Day 14: Round-robin Arbiter
 * Day 15: APB Master
 * Day 16: A Simple Memory Module
-* Day 17: APB Slave
+* Day 17: Different Ways of Implementing a Multiplexer
 * Day 18: Parameterized FIFO
 * Day 19: Register File
 * Day 20: 4-bit Serial Adder
