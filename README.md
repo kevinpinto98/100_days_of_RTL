@@ -22,7 +22,7 @@ From 26/08/2022 onwards I shall implement one RTL design and it's corresponding 
 * Day 15: APB Master
 * Day 16: A Simple Memory Module
 * Day 17: Different Ways of Implementing a Multiplexer
-* Day 18: Parameterized FIFO
+* Day 18: Binary to One-Hot Converter 
 * Day 19: Register File
 * Day 20: 4-bit Serial Adder
 * Day 21: Class based Testbenches (A Refresher)
