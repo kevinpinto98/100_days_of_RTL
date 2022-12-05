@@ -1,3 +1,4 @@
+//A simple register file consisting four registers each having a width of 32-bits
 module day19(
     output reg [31:0] ReadData1,
     output reg [31:0] ReadData2,
