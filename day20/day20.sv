@@ -10,12 +10,10 @@ assign clk_ff = clk & shift_control;
 
 logic x,y,z;
 
-logic [3:0] reg1, reg2;
-
-flip_flop ff(z,C,clk_ff,clear);
-shift_register_augend shift_reg1(x,reg1,S,clk,reset,shift_control);
-shift_register_addend shift_reg2(y,reg2,serial_input,clk,reset,shift_control);
-full_adder fa(S,C,x,y,z);
+flip_flop ff1(z,C,clk_ff,clear);
+shift_register_augend shift_reg1(x,S,clk,reset,shift_control);
+shift_register_addend shift_reg2(y,serial_input,clk,reset,shift_control);
+full_adder fa1(S,C,x,y,z);
 endmodule
 
 //Full Adder
@@ -27,58 +25,60 @@ assign {C,S} = x + y + z;
 endmodule
 
 //Flip-flop
-module flip_flop(q,d,clk,clear);
+module flip_flop(q,d,clk,rst);
 output reg q;
-input d,clk,clear;
+input d,clk,rst;
 
 always @(posedge clk) begin
-if(!clear) q <= 1'b0;
+if(!rst) q <= 1'b0;
 else q <= d;
 end
 endmodule
 
 //Shift Register for Augend
-module shift_register_augend(out,dout,din,clk,reset,shift_control);
-output reg out;
-output reg [3:0] dout;
+module shift_register_augend(out,din,clk,reset,shift_control);
+output out;
 input din;
 input clk, reset;
 input shift_control;
 
+reg [3:0] r_reg;
+wire [3:0] r_next;
 
 always @(posedge clk) begin
-if(shift_control) begin
     if(!reset) begin
-        dout <= 4'b0000;
-        out <= 1'b0;
+        r_reg <= 4'b1001;
     end
-    else begin
-        dout <= {din,dout[3:1]};
-        out <= dout[0];
-    end
+    else if(shift_control) begin
+        r_reg <= r_next;
 end
 end
+
+assign r_next = {din,r_reg[3:1]};
+assign out = r_reg[0];
+
 endmodule
 
 //Shift Register for Addend
-module shift_register_addend(out,dout,din,clk,reset,shift_control);
-output reg out;
-output reg [3:0] dout;
+module shift_register_addend(out,din,clk,reset,shift_control);
+output out;
 input din;
 input clk, reset;
 input shift_control;
 
+reg [3:0] r_reg;
+wire [3:0] r_next;
 
 always @(posedge clk) begin
-if(shift_control) begin
     if(!reset) begin
-        dout <= 4'b1001;
-        out <= 1'b0;
+        r_reg <= 4'b0000;
     end
-    else begin
-        dout <= {din,dout[3:1]};
-        out <= dout[0];
-    end
+    else if(shift_control) begin
+        r_reg <= r_next;
 end
 end
+
+assign r_next = {din,r_reg[3:1]};
+assign out = r_reg[0];
+
 endmodule
