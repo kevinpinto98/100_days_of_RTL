@@ -47,7 +47,7 @@ wire [3:0] r_next;
 
 always @(posedge clk) begin
     if(!reset) begin
-        r_reg <= 4'b1001;
+        r_reg <= 4'b0000;
     end
     else if(shift_control) begin
         r_reg <= r_next;
