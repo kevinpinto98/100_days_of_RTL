@@ -26,15 +26,17 @@ From 26/08/2022 onwards I shall implement one RTL design and it's corresponding 
 * Day 19: Register File
 * Day 20: 4-bit Serial Adder
 * Day 21: Class based Testbenches (A Refresher)
-* Day 22: Interface
-* Day 23: Interface
+* Day 22: Class based Testbenches (A Refresher)
+* Day 23: Class based Testbenches (A Refresher)
 * Day 24: Interface
-* Day 25: Pattern Generation using Constraints
-* Day 26: FIFO Verification using Queues
-* Day 27: Associative Arrays
-* Day 28: Events
-* Day 29: Mailboxes
-* Day 30: Functions vs Tasks
+* Day 25: Interface
+* Day 26: Interface
+* Day 27: Pattern Generation using Constraints
+* Day 28: FIFO Verification using Queues
+* Day 29: Associative Arrays
+* Day 30: Events
+* Day 31: Mailboxes
+* Day 32: Functions vs Tasks
 
 
 
